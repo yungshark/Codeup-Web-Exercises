@@ -1,0 +1,36 @@
+.hello_world{
+	background-color:lavender;
+	background-image:url(/img/cotton_candy_gradient.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+h1, h2{
+	color:springgreen;
+	text-decoration:underline;
+	font-family:helvetica;
+	}
+.about_me{ 
+	text-decoration-color:red;
+	font-family:"Courier New";
+	text-indent:40px;
+}
+.decimal_to_hex{
+	font-size:12px;
+}
+ol{
+	list-style:upper-latin;
+}
+ul{
+	list-style:square;
+}
+a:visited{
+	color:black;
+}
+a:hover{
+	color:lavender;
+}
+a{
+	color:white;
+}
