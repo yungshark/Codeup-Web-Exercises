@@ -5,4 +5,4 @@
 - HTML5 for content and structure
 - CSS3 for styling and presentation
 - JavaScript and jQuery
-- Object Oriented PHP
+- Object Oriented
