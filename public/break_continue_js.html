@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Break Continue</title>
+</head>
+<body>
+	<h1>Break Continue</h1>
+		it's lit
+	<script>
+		'use strict'
+
+		var random;
+
+		do{
+				random = Math.floor((Math.random()*50)+1);
+			} while (random % 2 == 0)
+
+			console.log('Random number to skip is: ' + random);
+
+		for (var i = 1; i <= 100; i++) {
+			 if (i % 2 == 0){
+				continue;
+			} else if (i == random){
+				console.log('Skipping:' + random);
+				continue;
+		}
+
+		console.log(i);
+	}
+
+
+
+	</script>
+</body>
+</html>
