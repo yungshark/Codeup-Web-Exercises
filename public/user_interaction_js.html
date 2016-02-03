@@ -11,16 +11,17 @@
 
 // todo: Ask the user if they like pizza.
 //       Based on their answer show a creative alert message.
-		var response = prompt('What is your name?');
-		response = response.trim()
-			console.log(response)
-			while (response == "") {
-		response = prompt('Please Enter your name')
-		if (response != null) {
+	var response = prompt('What is your name?');
+	response = response.trim()
+		// console.log(response)
+		while (response == "") {
+			response = prompt('Please Enter your name')
+		}
+		if (response == null) {
 			response = response.trim()
 		}
 		console.log(response)
-	}
+
 	var answer = confirm('Pizza or nah?');
 
 	if (answer) {
