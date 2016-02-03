@@ -14,9 +14,16 @@
 	var names = ['Logan','Mako','Bratham','Willengard']
 
 	for (var i = 0; i < names.length; i++) {
-		console.log('The name at index' + i + ' is ' + names[i]);
+		console.log('The name at index ' + i + ' is ' + names[i]);
 
 	}
+
+	names.forEach(function (element, index, array) {
+		console.log('The element is ' + element)
+		console.log('The index is ' + index)
+		console.log('The whole array is ' + array)
+
+	});
 
 
 
