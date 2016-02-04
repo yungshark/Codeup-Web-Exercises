@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+	// todo:
+// Copy the array of planets you created in the last lesson.
+var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+
+// todo: Join the planets array with pipes (|) to create a variable named 'planetsAsString'.
+var planetsAsString = planets.join("|");
+console.log(planetsAsString);
+
+// todo: Split the 'planetsAsString' variable by pipes (|) to create a variable named 'planetsAsArray'.
+var planetsAsArray = planetsAsString.split("|");
+console.log(planetsAsArray);
+
+	function join(array, delimeter){
+		var string = '';
+
+
+		array.forEach(function(element, index) {
+			string = string + element + delimeter
+		});
+
+		return string;
+	}
+
+	function join(array, delimeter) {
+		return array.join(delimeter)
+
+	}
+
+	join(planets, ",");
+
+	</script>
+</body>
+</html>
+
+my name is logan and im a genius
