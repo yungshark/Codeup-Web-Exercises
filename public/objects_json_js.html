@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>object intro</hi>
+<script>
+		'use strict'
+
+var books = [		
+		{
+			"title": "1984",
+			"author": {
+				"firstName": "George",
+				"lastName": "Orwell"
+			}
+
+		}, 
+		{
+
+			"title": "Night",
+			"author": {
+				"firstName": "Elie",
+				"lastName": "Wiesel"
+
+			}
+
+		}, 
+		{
+			"title": "Codex Seraphiniaus",
+			"author": {
+				"firstName": "Luigi",
+				"lastName": "Serafini"
+
+			}
+		}
+	];
+
+// console.log(books);
+
+
+// books.forEach(function(book, index, array) {
+// 	console.log("Book number is " + (index + 1));
+//     console.log("Title: " + book.title);
+//     console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+//     if(index < array.length -1) {
+//     	console.log("---");
+//     }
+// });
+
+var arrayOfBooks = [];
+var string = '';
+books.forEach(function(book, index, array){
+	var string = book.title + ' was written by ' + book.author.firstName + ' ' + book.author.lastName
+	console.log(string)
+	arrayOfBooks.push(string)
+
+});
+
+arrayOfBooks.forEach(function(book, index, array) {
+	console.log(string);
+});
+
+
+
+
+
+	</script>
+</body>
+</html>
