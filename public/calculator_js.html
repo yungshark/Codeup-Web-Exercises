@@ -1,0 +1,121 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+	<font size="1">tiny calculator: big dreams</size>
+	<br>
+	<input id="left" type="text" name="inputLeft" size="4" readonly>
+	<input id="center" type="text" name="operator" size="2" readonly>
+	<input id="right" type="text" name="inputRight" size="4" readonly>
+	<br>
+	<button class="numeric" id="button1">1</button></button>
+	<button class="numeric" id="button2">2</button>
+	<button class="numeric" id="button3">3</button>
+	<button id="button+">+</button>
+	<br>
+	<button class="numeric" id="button4">4</button>
+	<button class="numeric" id="button5">5</button>
+	<button class="numeric" id="button6">6</button>
+	<button id="button-">-</button>
+	<br>
+	<button class="numeric" id="button7">7</button>
+	<button class="numeric" id="button8">8</button>
+	<button class="numeric" id="button9">9</button>
+	<button id="button*">*</button>
+	<br>
+	<button id="buttonC">C</button>
+	<button class="numeric" id="button0">0</button>
+	<button id="button=">=</button>
+	<button id="button/">/</button>
+	<script>
+		var inputLeft = document.getElementById('left')
+		var operator = document.getElementById('center')
+		var inputRight = document.getElementById('right')
+
+
+
+
+		var button1 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button1')
+		}
+		document.getElementById('button1').addEventListener('click', button1, false);
+		var button2 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button2')
+		}
+		document.getElementById('button2').addEventListener('click', button2, false);
+		var button3 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button3')
+		}
+		document.getElementById('button3').addEventListener('click', button3, false);
+		var button4 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button4')
+		}
+		document.getElementById('button4').addEventListener('click', button4, false);
+		var button5 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button5')
+		}
+		document.getElementById('button5').addEventListener('click', button5, false);
+		var button6 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button6')
+		}
+		document.getElementById('button6').addEventListener('click', button6, false);
+		var button7 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button7')
+		}
+		document.getElementById('button7').addEventListener('click', button7, false);
+		var button8 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button8')
+		}
+		document.getElementById('button8').addEventListener('click', button8, false);
+		var button9 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button9')
+		}
+		document.getElementById('button9').addEventListener('click', button9, false);
+		var button0 = function(event) {
+			inputLeft.value += this.innerHTML;
+			console.log(event, 'button0')
+		}
+		document.getElementById('button0').addEventListener('click', button0, false);
+
+		var plus = document.getElementById('button+');
+		var subtract = document.getElementById('button-')
+		var divide = document.getElementById('button/')
+		var multiply = document.getElementById('button*')
+
+		var equals
+		
+		var activ
+
+		function calculate(){
+			if(operator == '+') {
+				input1 + input2
+				return
+			}
+			if(operator == '-'){
+				input - input2
+				return
+			}
+			if(operator == '*'){
+				input1 * input2
+				return
+			}
+			if(operator == '/'){
+				input1 / input2
+				return
+			}
+		}
+
+	</script>
+
+</body>
+</html>

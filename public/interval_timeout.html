@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+	var count = 0
+	var max = 10;
+	var interval = 500; // interval time in milliseconds
+
+	var intervalID = setInterval(function() {
+
+ 		if(count <= max) {
+ 			console.log('I farted ' + count + ' time(s)');
+ 			count++
+ 		} else {
+ 			clearInterval(intervalID)
+ 			console.log('Fart machine finished');
+ 		}
+
+	}, interval);
+
+	</script>
+</body>
+</html>

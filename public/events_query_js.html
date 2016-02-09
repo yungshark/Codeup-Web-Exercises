@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>get shwifty</title>
+</head>
+<body>
+	<button id="btn1" data-btn="1">bUTTON 1!</button>
+	<button id="btn2" data-btn="2">bUTTON 2!</button>
+	<button id="btn3" data-btn="3">bUTTON 3!</button>
+	<button id="btn4" data-btn="4">bUTTON 4!</button>
+	<button id="btn5" data-btn="5">bUTTON 5!</button>
+	<script>
+		var buttons = document.getElementsByTagName('button');
+
+		var listener = function (event) {
+			console.log(event)
+	}
+	for (var i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener('click', listener);
+}
+	</script>
+</body>
+</html>

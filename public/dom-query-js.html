@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM: Query and Modify</title>
+</head>
+<body>
+    <h1 id="main-header">Hello World!</h1>
+    <button class="btn" id="change-header">Change header content</button>
+    <button class="btn" id="change-subHeader">Make subheader blue</button>
+    <button class="btn" id="style-listItems">Style List Items</button>
+    <button class="btn" id="change-subParagraphs">Alter Paragraph text</button>
+    <ul>
+        <li data-dbid="1">Item 1</li>
+        <li data-dbid="2">Item 2</li>
+        <li data-dbid="3">Item 3</li>
+        <li data-dbid="4">Item 4</li>
+        <li data-dbid="5">Item 5</li>
+    </ul>
+    <h2 id="sub-header">Hello Again.</h2>
+    <p class="sub-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <script>
+        "use strict";
+        (function() {
+            var listener = function (event) {
+                console.log(this);
+                console.log(event.target);
+
+            });
+
+            
+            
+            function changeHeader(){
+                var button1 = document.getElementById('change-header')
+                button1.addEventListener('click', changeHeader);
+                var mainHeader = document.getElementById('main-header');
+                mainHeader.innerHTML = 'Javascript is Cool'
+                
+            }
+            function changeSubHeader(){
+                var button2 = document.getElementById('change-subHeader')
+                button2.addEventListener('click', changeSubHeader);
+                var subHeader = document.getElementById('sub-header');
+                subHeader.style['color'] = 'blue';
+            }
+            function styleListItems(){
+                var button3 = document.getElementById('style-listItems')
+                button3.addEventListener('click', styleListItems)
+                var listItems = document.getElementsByTagName('li');
+                for (var i = 0; i < listItems.length; i++)
+                    if(i % 2 == 0) {
+                        listItems[i].style.color='grey';
+
+                    }
+                    if(listItems[i].getAttirbute('data-dbid') == "1"){
+                        listItems[i].style.color='blue'
+                    }
+            }
+            function changeSubParagraph(){
+                var button4 = document.getElementById('change-subParagraphs')
+                button4.addEventListener('click', changeSubParagraph)
+                var subParagraphs = document.getElementsByClassName('sub-paragraph');
+                subParagraphs[0].innerHTML='MissionAccomplished'
+            }
+            
+            
+        })
+    
+    ();
+    </script>
+</body>
+</html>
