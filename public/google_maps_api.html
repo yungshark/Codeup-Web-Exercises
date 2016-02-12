@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="map-canvas"></div>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANd_v8t80HrE8u4yEclH9WPXzY9TwyuSk"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        
+        var mapOptions = {
+           
+            zoom: 18,
+
+            
+            center: {
+                lat:  29.426165,
+                lng: -98.489477
+            }
+
+
+        };
+
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        var walgreens = { lat: 29.426165, lng: -98.489477 };
+        var marker = new google.maps.Marker({
+            position: walgreens,
+            map: map
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content: "I don't eat food but here's a good place for snacks!"
+        })
+        infowindow.open(map, marker);
+
+    })();
+    </script>
+</body>
