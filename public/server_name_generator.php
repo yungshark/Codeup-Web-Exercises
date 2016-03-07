@@ -1,22 +1,19 @@
 <?php
-
+function pageController(){
 $title = "Server Name Generator!";
 $nouns = ['finger', 'macintosh', 'zebra', 'shark', 'window', 'eyeball', 'bear', 'horndorn', 'alien', 'sauce'];
 $adjectives = ['foreign', 'pale', 'weird', 'dark', 'liquid', 'legless', 'invalid', 'blind', 'annoying', 'hornless'];
 
-function gerRandom($array) {
-	$key = array_rand($array);
-	$value = $array($key);
-	return $value;
-};
 $randAdj = array_rand($adjectives);
 $randNoun = array_rand($nouns);
 $serverName = $adjectives[$randAdj] . ' ' . $nouns[$randNoun];
+return array(
+	'serverName' => $serverName
+	);
+}
 
+extract(pageController());
 
-function getRandom(){
-
-};
 ?>
 <!doctype HTML>
 <html>
