@@ -16,8 +16,13 @@ class User extends Model
         $stmt = $dbc->prepare($insert);
 
         // @TODO: You will need to iterate through all the attributes to build the prepared query
-        $user = ['username' => $username, 'password' => $password, 'email' => $email]
-        return $user;
+        foreach ($this->attributes as $key => $value){
+            echo $key . PHP_EOL . '\':' . $key . '\'' . PHP_EOL;
+            $stmt->bindValue(':' . $key, $value, PDO::PARAM_STR);
+        }
+        // following code also works but doesnt follow the instructions:
+        // $user = ['username' => $username, 'password' => $password, 'email' => $email]
+        // return $user;
 
         // @TODO: After the insert, add the id back to the attributes array
         //        so the object properly represents a DB record
@@ -32,8 +37,10 @@ class User extends Model
             VALUES (:username, :password, :email)";
 
         // @TODO: You will need to iterate through all the attributes to build the prepared query
-            $user = ['username' => $username, 'password' => $password, 'email' => $email]
-            return $user;
+            foreach ($this->attributes as $key => $value){
+            echo $key . PHP_EOL . '\':' . $key . '\'' . PHP_EOL;
+            $stmt->bindValue(':' . $key, $value, PDO::PARAM_STR);
+            }
     }
 
     /**
