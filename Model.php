@@ -33,6 +33,9 @@ abstract class Model
         if (!self::$dbc) {
             // @TODO: Connect to database
             $dbc = new PDO('mysql:host=127.0.0.1;dbname=codeup_test_db', 'vagrant', 'vagrant', 'vagrant');
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::MySQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         }
     }
 
@@ -47,7 +50,7 @@ abstract class Model
     {
         // @TODO: Return the value from attributes for $name if it exists, else return null
         if(array_key_exists($name, $this->attributes)){
-            return $this-attributes;
+            return $this->attributes;
         } else {
             return null;
         }
@@ -69,7 +72,7 @@ abstract class Model
     public function save()
     {
         // @TODO: Ensure there are values in the attributes array before attempting to save
-        if(!empty($this-attributes['id'])){
+        if(empty($this->attributes['id'])){
             $this->update();
         } else {
             $this->insert();
